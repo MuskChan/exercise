@@ -71,8 +71,8 @@
 </script>
 <!-- 表格状态列 -->
 <script type="text/html" id="tableStateUser">
-    <input type="checkbox" lay-filter="ckStateUser" value="1" lay-skin="switch"
-           lay-text="正常|锁定" checked/>
+    <input type="checkbox" lay-filter="ckStateUser" value="@{{d.userId}}" lay-skin="switch"
+           lay-text="正常|锁定" @{{d.state==0?'checked':''}}/>
 </script>
 <!-- 表单弹窗 -->
 <script type="text/html" id="modelUser">

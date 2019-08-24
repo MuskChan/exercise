@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/welcome', 'HomeController@welcome')->name('welcome');
+Route::resource('users', 'UserController');
+
+Route::get('notify/index', 'NotificationController@index');
