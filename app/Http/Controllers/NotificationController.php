@@ -2,8 +2,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Message;
-use App\User;
+use App\Models\Message;
+use App\Models\User;
 use App\Notifications\NewMessage;
 use Illuminate\Support\Facades\Notification;
 

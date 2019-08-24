@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Notifications\Direct;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -15,8 +14,6 @@ class UserController extends Controller
      */
     public function index(User $user)
     {
-        $noti = $user->notify(new Direct('hello 消息'));
-        dd($noti);
         return view('user.index');
     }
 
