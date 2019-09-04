@@ -2,6 +2,7 @@
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
+use Monolog\Formatter\HtmlFormatter;
 
 return [
 
@@ -51,6 +52,10 @@ return [
             'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
             'days' => 14,
+            'formatter' => HtmlFormatter::class,
+            'formatter_with' => [
+                'dateFormat' => 'y-m-d',
+            ],
         ],
 
         'slack' => [

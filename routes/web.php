@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Log;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,10 @@
 */
 
 Route::get('/', function () {
+    //Log::info('A user has arrived at the welcome page.');
+    //Log::channel('slack')->info('This is an informative Slack message.');
+    //Log::stack(['single', 'email'])->critical('I need ice-cream!');
+    Log::alert('This page was loaded', ['user' => 3, 'previous_page' => 'www.google.com']);
     return view('welcome');
 });
 
