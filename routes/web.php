@@ -22,3 +22,11 @@ Route::get('/welcome', 'HomeController@welcome')->name('welcome');
 Route::resource('users', 'UserController');
 
 Route::get('notify/index', 'NotificationController@index');
+
+/*
+*|--------------------------------------------------------------------------
+*| 广播
+*|--------------------------------------------------------------------------
+*/
+Route::get('message/index', 'MessageController@index');
+Route::get('message/send', 'MessageController@send');
