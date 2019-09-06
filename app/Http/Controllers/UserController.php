@@ -12,8 +12,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $user)
+    public function index(Request $request)
     {
+        if($request->expectsJson()){
+            $data = $request->except(['_url']);
+            $list = User::orderByDesc('id')->paginate($data['limit']);
+            return table($list->items(), $list->total());
+        }
         return view('user.index');
     }
 

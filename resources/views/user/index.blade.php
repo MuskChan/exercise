@@ -132,14 +132,14 @@
         // 渲染表格
         var insTb = table.render({
             elem: '#tableUser',
-            url: '../../json/user.json',
+            url: "{{route('users.index')}}",
             page: true,
             toolbar: true,
             cellMinWidth: 100,
             cols: [[
                 {type: 'numbers', title: '#'},
-                {field: 'username', sort: true, title: '账号'},
-                {field: 'nickName', sort: true, title: '用户名'},
+                {field: 'email', sort: true, title: 'email'},
+                {field: 'name', sort: true, title: '用户名'},
                 {field: 'sex', sort: true, title: '性别'},
                 {
                     field: 'createTime', sort: true, templet: function (d) {
