@@ -42,9 +42,8 @@ return [
         ],
 
         'api' => [
-            'driver' => 'storage_key',
+            'driver' => 'passport',
             'provider' => 'users',
-            'hash' => false,
         ],
     ],
 
